@@ -28,6 +28,8 @@ var RevealZoom = (function(){
 })();
 
 Reveal.registerPlugin( 'zoom', RevealZoom );
+Reveal.addEventListener( 'overviewshown', function() { isEnabled = false; } );
+Reveal.addEventListener( 'overviewhidden', function() { isEnabled = true; } );
 
 /*!
  * zoom.js 0.3 (modified for use with reveal.js)
